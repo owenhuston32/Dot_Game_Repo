@@ -40,8 +40,4 @@
 # debug information files
 *.dwo
 
-Game/.vs/Dot-Game/
-
-Assets/
-
-Game/x64/
+.vs/
