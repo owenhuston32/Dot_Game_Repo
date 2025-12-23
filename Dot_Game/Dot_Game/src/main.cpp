@@ -3,7 +3,7 @@
 #include "RenderSystem.h"
 #include "RenderComponents.h"
 #include "World.h"
-#include "../Renderer.h"
+#include "Renderer.h"
 
 
 int main() {

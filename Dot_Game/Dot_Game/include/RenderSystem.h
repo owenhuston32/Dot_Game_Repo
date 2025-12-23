@@ -2,7 +2,7 @@
 #include "world.h"
 #include "RenderComponents.h"
 
-#include "../Renderer.h"
+#include "Renderer.h"
 
 class RenderSystem {
 public:
