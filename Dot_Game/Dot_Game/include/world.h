@@ -1,52 +1,51 @@
 #pragma once
+
 #include <unordered_map>
 #include <typeindex>
 #include <memory>
-#include <cstdint>
 
 using Entity = std::uint32_t;
-
-// ----------------------
-// Base Component Store
-// ----------------------
 
 class IComponentStore {
 public:
     virtual ~IComponentStore() = default;
-    virtual void remove(Entity entity) = 0;
+    virtual void remove(Entity) = 0;
 };
-
-// ----------------------
-// Templated Component Store
-// ----------------------
 
 template<typename T>
 class ComponentStore : public IComponentStore {
 public:
-    void add(Entity entity, T component) {
-        components[entity] = component;
+    void add(Entity e, const T& component) {
+        components[e] = component;
     }
 
-    void remove(Entity entity) override {
-        components.erase(entity);
+    void remove(Entity e) override {
+        components.erase(e);
     }
 
-    T* get(Entity entity) {
-        auto it = components.find(entity);
-        return (it != components.end()) ? &it->second : nullptr;
+    T* get(Entity e) {
+        auto it = components.find(e);
+        return it != components.end() ? &it->second : nullptr;
     }
 
-    const std::unordered_map<Entity, T>& data() const {
-        return components;
-    }
+    auto& data() { return components; }
+    const auto& data() const { return components; }
 
 private:
     std::unordered_map<Entity, T> components;
 };
 
-// ----------------------
-// World
-// ----------------------
+template<typename T>
+class ComponentView {
+public:
+    ComponentView(std::unordered_map<Entity, T>& data) : data(data) {}
+
+    auto begin() { return data.begin(); }
+    auto end() { return data.end(); }
+
+private:
+    std::unordered_map<Entity, T>& data;
+};
 
 class World {
 public:
@@ -54,18 +53,42 @@ public:
     void destroyEntity(Entity entity);
 
     template<typename T>
-    void addComponent(Entity entity, T component);
+    void addComponent(Entity entity, const T& component) {
+        getStore<T>().add(entity, component);
+    }
 
     template<typename T>
-    void removeComponent(Entity entity);
+    void removeComponent(Entity entity) {
+        getStore<T>().remove(entity);
+    }
 
     template<typename T>
-    T* getComponent(Entity entity);
+    T* getComponent(Entity entity) {
+        return getStore<T>().get(entity);
+    }
 
     template<typename T>
-    ComponentStore<T>& getStore();
+    ComponentView<T> view() {
+        return ComponentView<T>(getStore<T>().data());
+    }
 
 private:
-    Entity nextEntity = 1;
-    std::unordered_map<std::type_index, std::unique_ptr<IComponentStore>> stores;
+    template<typename T>
+    ComponentStore<T>& getStore() {
+        auto type = std::type_index(typeid(T));
+
+        auto [it, inserted] = stores.try_emplace(
+            type,
+            std::make_unique<ComponentStore<T>>()
+        );
+
+        return *static_cast<ComponentStore<T>*>(it->second.get());
+    }
+
+    std::unordered_map<
+        std::type_index,
+        std::unique_ptr<IComponentStore>
+    > stores;
+
+    Entity nextEntity{ 0 };
 };

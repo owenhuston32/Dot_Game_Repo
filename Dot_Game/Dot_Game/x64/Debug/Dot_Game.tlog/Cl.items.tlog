@@ -1,1 +1,5 @@
-C:\Users\owenh\Desktop\Projects\Dot_Game_Repo\Dot_Game\Dot_Game\main.cpp;C:\Users\owenh\Desktop\Projects\Dot_Game_Repo\Dot_Game\Dot_Game\x64\Debug\main.obj
+C:\Users\owenh\Desktop\Projects\Dot_Game_Repo\Dot_Game\Dot_Game\Renderer.cpp;C:\Users\owenh\Desktop\Projects\Dot_Game_Repo\Dot_Game\Dot_Game\x64\Debug\Renderer.obj
+C:\Users\owenh\Desktop\Projects\Dot_Game_Repo\Dot_Game\Dot_Game\src\main.cpp;C:\Users\owenh\Desktop\Projects\Dot_Game_Repo\Dot_Game\Dot_Game\x64\Debug\main.obj
+C:\Users\owenh\Desktop\Projects\Dot_Game_Repo\Dot_Game\Dot_Game\src\RenderSystem.cpp;C:\Users\owenh\Desktop\Projects\Dot_Game_Repo\Dot_Game\Dot_Game\x64\Debug\RenderSystem.obj
+C:\Users\owenh\Desktop\Projects\Dot_Game_Repo\Dot_Game\Dot_Game\src\UpdateSystem.cpp;C:\Users\owenh\Desktop\Projects\Dot_Game_Repo\Dot_Game\Dot_Game\x64\Debug\UpdateSystem.obj
+C:\Users\owenh\Desktop\Projects\Dot_Game_Repo\Dot_Game\Dot_Game\src\World.cpp;C:\Users\owenh\Desktop\Projects\Dot_Game_Repo\Dot_Game\Dot_Game\x64\Debug\World.obj

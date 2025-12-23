@@ -1,2 +1,5 @@
-﻿  main.cpp
+﻿  Renderer.cpp
+  RenderSystem.cpp
+  main.cpp
+  Generating Code...
   Dot_Game.vcxproj -> C:\Users\owenh\Desktop\Projects\Dot_Game_Repo\Dot_Game\x64\Debug\Dot_Game.exe
