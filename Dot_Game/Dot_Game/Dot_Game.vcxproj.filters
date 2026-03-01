@@ -13,8 +13,17 @@
     <ClCompile Include="src\UpdateSystem.cpp">
       <Filter>src\systems</Filter>
     </ClCompile>
-    <ClCompile Include="Renderer.cpp">
-      <Filter>src\render</Filter>
+    <ClCompile Include="src\VelocitySystem.cpp">
+      <Filter>src\systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SpawnSystem.cpp">
+      <Filter>src\systems</Filter>
+    </ClCompile>
+    <ClCompile Include="src\InputManager.cpp">
+      <Filter>src\managers</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GuiManager.cpp">
+      <Filter>src\managers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -27,8 +36,32 @@
     <ClInclude Include="include\RenderSystem.h">
       <Filter>include\systems</Filter>
     </ClInclude>
-    <ClInclude Include="Renderer.h">
-      <Filter>include\render</Filter>
+    <ClInclude Include="include\TransformComponents.h">
+      <Filter>include\components</Filter>
+    </ClInclude>
+    <ClInclude Include="include\VelocitySystem.h">
+      <Filter>include\systems</Filter>
+    </ClInclude>
+    <ClInclude Include="include\VelocityComponents.h">
+      <Filter>include\components</Filter>
+    </ClInclude>
+    <ClInclude Include="include\EntityComponents.h">
+      <Filter>include\components</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SpawnSystem.h">
+      <Filter>include\systems</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CommandComponents.h">
+      <Filter>include\components</Filter>
+    </ClInclude>
+    <ClInclude Include="include\InputManager.h">
+      <Filter>include\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameStateManager.h">
+      <Filter>include\managers</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GuiManager.h">
+      <Filter>include\managers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -41,17 +74,54 @@
     <Filter Include="include">
       <UniqueIdentifier>{1e4ee570-06b1-432c-9a51-1032b961d9f0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="include\render">
-      <UniqueIdentifier>{866252b2-f413-48db-9e84-87d826ca2398}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\render">
-      <UniqueIdentifier>{ed965eb4-5e90-4882-892b-b2f40c1366aa}</UniqueIdentifier>
-    </Filter>
     <Filter Include="include\components">
       <UniqueIdentifier>{76506e80-4253-446f-99e4-281f098288fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\managers">
+      <UniqueIdentifier>{b24a828b-fc23-4179-b121-f9b17e810159}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\managers">
+      <UniqueIdentifier>{010ff68d-ce1a-4e8e-aced-502e3f34e2f9}</UniqueIdentifier>
     </Filter>
     <Filter Include="include\systems">
       <UniqueIdentifier>{4000d333-8ba7-411d-9c07-a866c764c16c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\resources">
+      <UniqueIdentifier>{a32ab036-9abe-4862-99ff-3ef57ad1a07f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\resources\json">
+      <UniqueIdentifier>{bd6858f7-c3ea-4157-bbeb-b913183b6e41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\resources\textures">
+      <UniqueIdentifier>{0121aa87-2ebb-4f27-9221-53a99e685a82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\resources\json\screens">
+      <UniqueIdentifier>{9977c757-be8e-4e61-8d42-4e4cede8f1f1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\json\Bindings.json">
+      <Filter>src\resources\json</Filter>
+    </None>
+    <None Include="resources\json\Spawns.json">
+      <Filter>src\resources\json</Filter>
+    </None>
+    <None Include="resources\json\MainMenu.json">
+      <Filter>src\resources\json\screens</Filter>
+    </None>
+    <None Include="resources\json\PauseMenu.json">
+      <Filter>src\resources\json\screens</Filter>
+    </None>
+    <None Include="resources\json\BindingsMenu.json">
+      <Filter>src\resources\json\screens</Filter>
+    </None>
+    <None Include="resources\json\SettingsMenu.json">
+      <Filter>src\resources\json\screens</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\textures\test.bmp">
+      <Filter>src\resources\textures</Filter>
+    </Image>
   </ItemGroup>
 </Project>
