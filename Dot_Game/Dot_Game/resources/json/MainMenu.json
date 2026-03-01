@@ -1,0 +1,35 @@
+{
+  "panel": {
+    "size": ["40%", "60%"],
+    "position": ["30%", "20%"]
+  },
+  "title": {
+    "text": "Dot Game",
+    "textSizeDivisor": 12,
+    "size": ["100%", "15%"],
+    "position": ["0%", "3%"]
+  },
+  "buttons": [
+    {
+      "id": "play",
+      "text": "Play",
+      "position": ["10%", "30%"],
+      "size": ["80%", "12%"],
+      "action": { "type": "push_screen", "screen": "Gameplay" }
+    },
+    {
+      "id": "options",
+      "text": "Options",
+      "position": ["10%", "48%"],
+      "size": ["80%", "12%"],
+      "action": { "type": "push_screen", "screen": "Settings" }
+    },
+    {
+      "id": "exit",
+      "text": "Exit",
+      "position": ["10%", "66%"],
+      "size": ["80%", "12%"],
+      "action": { "type": "close_window" }
+    }
+  ]
+}

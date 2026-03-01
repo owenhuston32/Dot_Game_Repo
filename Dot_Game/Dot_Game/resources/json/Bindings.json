@@ -1,0 +1,46 @@
+{
+  "bindings": {
+    "keyboard": [
+      {
+        "key": "a",
+        "action": "MoveLeft"
+      },
+      {
+        "key": "d",
+        "action": "MoveRight"
+      },
+      {
+        "key": "Space",
+        "action": "Jump"
+      },
+      {
+        "key": "Escape",
+        "action": "Escape"
+      }
+    ],
+    "joystick": {
+      "buttons": [
+        {
+          "button": 0,
+          "action": "Jump"
+        },
+        {
+          "button": 1,
+          "action": "Fire"
+        }
+      ],
+      "axes": [
+        {
+          "axis": "X",
+          "direction": -1,
+          "action": "MoveLeft"
+        },
+        {
+          "axis": "X",
+          "direction": 1,
+          "action": "MoveRight"
+        }
+      ]
+    }
+  }
+}

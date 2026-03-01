@@ -1,11 +1,16 @@
 #pragma once
-struct Position {
-    float x;
-    float y;
-};
+#include <iostream>
+#include <SFML/Graphics.hpp>
 
 struct Sprite {
-    int textureId;   // or string name later
-    float width;
-    float height;
+    std::string textureFilePath;
+};
+
+struct Renderer {
+    const sf::IntRect _textureRect;
+    const std::string _texturePath;
+
+    explicit Renderer(const std::string& texturePath, const sf::IntRect& textureRect)
+        : _texturePath(texturePath), _textureRect(textureRect) {
+    };
 };

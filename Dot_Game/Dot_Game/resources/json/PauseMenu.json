@@ -1,0 +1,41 @@
+{
+  "panel": {
+    "size": ["40%", "60%"],
+    "position": ["30%", "20%"]
+  },
+  "title": {
+    "text": "PAUSED",
+    "textSizeDivisor": 14,
+    "size": ["100%", "15%"],
+    "position": ["0%", "3%"]
+  },
+  "buttons": [
+    {
+      "id": "Resume",
+      "text": "Resume",
+      "position": [ "10%", "30%" ],
+      "size": [ "80%", "12%" ],
+      "action": { "type": "pop_screen" }
+    },
+    {
+      "id": "settings",
+      "text": "Settings",
+      "position": [ "10%", "48%" ],
+      "size": [ "80%", "12%" ],
+      "action": {
+        "type": "push_screen",
+        "screen": "Settings"
+      }
+    },
+    {
+      "id": "MainMenu",
+      "text": "MainMenu",
+      "position": [ "10%", "66%" ],
+      "size": [ "80%", "12%" ],
+      "action": {
+        "type": "push_screen",
+        "screen": "MainMenu"
+      }
+    }
+  ]
+}

@@ -1,10 +1,17 @@
 #include "Renderer.h"
 #include <iostream>
+#include <SFML/Graphics.hpp>
 
 
-void Renderer::drawSprite(const Position& pos) {
+Renderer::Renderer(const Position& pos, const Sprite& sprite) 
+	: _pos(pos), _sprite(sprite) {
 
-	std::cout << "TODO: implement drawSprite in Renderer";
+}
 
+const Sprite& Renderer::getSprite() {
+	return _sprite;
+}
 
+const Position& Renderer::getPosition() {
+	return _pos;
 }

@@ -1,0 +1,52 @@
+{
+  "entities": [
+    {
+      "id": "player",
+      "components": {
+        "Transform": {
+          "pos": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          },
+          "rot": 1,
+          "scale": 1
+        },
+        "Renderer": {
+          "texture": "./resources/Textures/test.bmp",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 100,
+            "height": 100
+          }
+        },
+        "PlayerTag": {}
+      }
+    },
+    {
+      "id": "player_2",
+      "components": {
+        "Transform": {
+          "pos": {
+            "x": 200,
+            "y": 200,
+            "z": 0
+          },
+          "rot": 1,
+          "scale": 1
+        },
+        "Renderer": {
+          "texture": "./resources/Textures/test.bmp",
+          "rect": {
+            "x": 10,
+            "y": 10,
+            "width": 50,
+            "height": 50
+          }
+        },
+        "PlayerTag": {}
+      }
+    }
+  ]
+}
